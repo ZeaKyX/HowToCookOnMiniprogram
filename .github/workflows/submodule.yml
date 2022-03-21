@@ -18,6 +18,7 @@ jobs:
           ref: main
           fetch-depth: 0
           lfs: true
+          submodules: true
 
       - name: Set git config
         run: |
@@ -44,5 +45,5 @@ jobs:
           
       - name: Push Commits
         env:
-          DOWNSTREAM_BRANCH: master
+          DOWNSTREAM_BRANCH: main
         run: git push origin $DOWNSTREAM_BRANCH
